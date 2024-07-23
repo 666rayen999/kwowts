@@ -1,0 +1,12 @@
+[package]
+name = "chatting-app"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+wasm-bindgen = "*"
+strsim = "*"
+rustrict = "0.7.26"
+
+[lib]
+crate-type = ["cdylib"]

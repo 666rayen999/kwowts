@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.gradient-text {
+    color: transparent;
+    background: linear-gradient(
+        to top,
+        theme("colors.purple.light-acc"),
+        theme("colors.purple.light")
+    );
+    background-clip: text;
+}
+
+.dark .gradient-text {
+    color: transparent;
+    background: linear-gradient(
+        to top,
+        theme("colors.purple.dark"),
+        theme("colors.purple.dark-acc")
+    );
+    background-clip: text;
+}
+
+svg.loading-svg {
+    animation: a0 2s ease-in-out infinite;
+}
+
+svg.loading-svg g {
+    transform-origin: center;
+    animation: a1a 2s linear infinite;
+}
+
+svg.loading-svg g circle {
+    stroke-linecap: round;
+    animation: a2 2s ease-in-out infinite;
+}
+
+@keyframes a0 {
+    from,
+    to {
+        opacity: 0;
+    }
+    20%,
+    80% {
+        opacity: 1;
+    }
+}
+
+@keyframes a1 {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes a2 {
+    from {
+        stroke-dasharray: 0 251;
+        stroke-dashoffset: 0;
+    }
+    50% {
+        stroke-dasharray: 100 251;
+        stroke-dashoffset: -100;
+    }
+    to {
+        stroke-dasharray: 0 251;
+        stroke-dashoffset: -251;
+    }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "chatting-app",
+  "type": "module",
+  "version": "0.1.0",
+  "files": [
+    "chatting_app_bg.wasm",
+    "chatting_app.js",
+    "chatting_app.d.ts"
+  ],
+  "main": "chatting_app.js",
+  "types": "chatting_app.d.ts",
+  "sideEffects": [
+    "./snippets/*"
+  ]
+}
